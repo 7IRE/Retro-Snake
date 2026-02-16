@@ -1,7 +1,7 @@
 # Retro Snake
 
 A C++ Snake game built with the raylib library, emphasizing clean Object-Oriented Programming (OOP) principles.
-
+<img width="900" height="900" alt="Retro Snake 16-02-2026 15_23_17" src="https://github.com/user-attachments/assets/94eccf68-d39f-4b1f-ac01-94ace61c1eed" />
 ---
 
 ## Features
@@ -10,6 +10,7 @@ A C++ Snake game built with the raylib library, emphasizing clean Object-Oriente
 * **Win Detection:** Logical checks to determine when the player has successfully filled the grid.
 * **Clean OOP Design:** Encapsulated logic for Snake, Food, and Game state management.
 * **Grid-Based Movement:** Classic arcade-style precision and responsiveness.
+
 
 ---
 
