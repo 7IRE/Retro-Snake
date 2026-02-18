@@ -165,27 +165,41 @@ int main()
     InitWindow(2*offset + cellSize * cellCount, 2*offset + cellSize * cellCount, "Retro Snake");
     SetTargetFPS(60);
     Game game = Game();
+    char keypressed='d';
     while (!WindowShouldClose())
     {
         BeginDrawing();
         if(eventTriggered(0.2)){
             game.Update();
-        }
-        if(IsKeyPressed(KEY_UP) && game.snake.direction.y !=1){
+        if(keypressed=='w' && game.snake.direction.y !=1){
             game.snake.direction={0,-1};
             game.running=true;
         }
-        if(IsKeyPressed(KEY_DOWN)&& game.snake.direction.y !=-1){
+        if(keypressed=='s'&& game.snake.direction.y !=-1){
             game.snake.direction={0,1};
             game.running=true;
         }
-        if(IsKeyPressed(KEY_LEFT)&& game.snake.direction.x !=1){
+        if(keypressed=='a'&& game.snake.direction.x !=1){
             game.snake.direction={-1,0};
             game.running=true;
         }
-        if(IsKeyPressed(KEY_RIGHT)&& game.snake.direction.x !=-1){
+        if(keypressed=='d'&& game.snake.direction.x !=-1){
             game.snake.direction={1,0};
             game.running=true;
+        }
+
+        }
+        if(IsKeyPressed(KEY_UP) && game.snake.direction.y !=1){
+            keypressed='w';
+        }
+        if(IsKeyPressed(KEY_DOWN)&& game.snake.direction.y !=-1){
+             keypressed='s';
+        }
+        if(IsKeyPressed(KEY_LEFT)&& game.snake.direction.x !=1){
+             keypressed='a';
+        }
+        if(IsKeyPressed(KEY_RIGHT)&& game.snake.direction.x !=-1){
+             keypressed='d';
         }
         ClearBackground(Green);
         DrawRectangleLinesEx(Rectangle{(float)offset-5,(float)offset-5,(float)cellSize*cellCount +10,(float)cellSize*cellCount +10},5,darkGreen);
